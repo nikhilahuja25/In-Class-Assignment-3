@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+<p id="page"></p>
+<script>
+var lefttime = 10;
+var Timer = setInterval(function()
+  {
+  document.getElementById("page").innerHTML = lefttime + " Seconds Remaining!";
+  lefttime -=1;
+  if(lefttime <= 0)
+  {
+    clearInterval(Timer);
+    document.getElementById("page").innerHTML = "BLAST OFF!!!"
+  }
+  }, 1000);
+</script>
+
+</body>
+</html>
